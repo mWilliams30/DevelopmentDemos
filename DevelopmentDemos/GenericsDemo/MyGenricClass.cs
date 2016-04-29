@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace GenericsDemo
 {
+    //Genrics types allow code reuse with type safety
     public class MyGenricClass<T>
     {
     }
