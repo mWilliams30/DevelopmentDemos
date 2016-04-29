@@ -1,0 +1,1 @@
+1. Genrics types allow code reuse with type safety

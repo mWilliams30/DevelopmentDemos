@@ -9,5 +9,9 @@ namespace GenericsDemo
     //Genrics types allow code reuse with type safety
     public class MyGenricClass<T>
     {
+        public string WhatTypeAmI()
+        {
+            return "I am of type " + GetType();
+        }
     }
 }
