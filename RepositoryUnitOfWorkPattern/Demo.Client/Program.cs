@@ -12,7 +12,7 @@ namespace Demo.Client
     {
         static void Main(string[] args)
         {
-            using (var unitOfWork = new UnitOfWork(new NORTHWNDContext()))
+            using (var unitOfWork = new NorthwindWork(new NORTHWNDContext()))
             {
                 var employees = unitOfWork.Employees.GetAll();
                 var companies = unitOfWork.Orders.GetAll();

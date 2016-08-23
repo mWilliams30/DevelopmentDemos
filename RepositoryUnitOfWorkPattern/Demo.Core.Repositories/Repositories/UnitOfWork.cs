@@ -4,14 +4,14 @@ using Demo.Core.Repositories.Interfaces;
 
 namespace Demo.Core.Repositories
 {
-    public class UnitOfWork : IUnitOfWork
+    public class NorthwindWork : IUnitOfWork
     {
         private readonly NORTHWNDContext _context;
         public IOrderRepository Orders { get; }
         public IEmployeeRepository Employees { get; }
         public ICategoriesRepository Categories { get; }
 
-        public UnitOfWork(NORTHWNDContext context)
+        public NorthwindWork(NORTHWNDContext context)
         {
             _context = context;
             Orders = new OrderRepository(_context);
