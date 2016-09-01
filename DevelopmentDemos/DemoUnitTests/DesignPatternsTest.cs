@@ -1,15 +1,20 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using DesignPatterns.Composite;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using DesignPatterns.Factory;
+using Circle = DesignPatterns.Factory.Circle;
+using IShape = DesignPatterns.Factory.IShape;
 
 namespace DemoUnitTests
 {
     [TestClass]
-    public class DesignPatternsTest
+    public class FactoryDesignPatternsTest
     {
         readonly IShapeFactory _shapeFactory;
 
-        public DesignPatternsTest()
+        public FactoryDesignPatternsTest()
         {
             _shapeFactory = new ShapeFactory();
         }
@@ -35,4 +40,36 @@ namespace DemoUnitTests
             IShape square = _shapeFactory.CreateShape("Square");           
         }
     }
+
+    [TestClass]
+    public class CompositeDesignPatternTests
+    {
+        [TestMethod]
+        public void TestAddingToArrayIsSameAsAddRange()
+        {
+            DesignPatterns.Composite.IShape c = new DesignPatterns.Composite.Circle();
+            DesignPatterns.Composite.IShape t = new Triange();
+            DesignPatterns.Composite.IShape s = new Square();
+
+            ShapeComposite shapeComposite = new ShapeComposite();
+            shapeComposite.Add(c);
+            shapeComposite.Add(t);
+            shapeComposite.Add(s);
+
+            ArrayList shapeComposite2 = new ArrayList();
+            shapeComposite2.AddRange(new List<DesignPatterns.Composite.IShape>()
+            {
+                new DesignPatterns.Composite.Circle(), new Square(), new Triange()
+            });
+
+            Assert.AreEqual(shapeComposite, shapeComposite2);
+            
+
+        }
+
+
+
+    }
+
+   
 }

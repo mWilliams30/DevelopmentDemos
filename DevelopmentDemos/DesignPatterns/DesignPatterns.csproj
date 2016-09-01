@@ -40,12 +40,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Composite\Circle.cs" />
+    <Compile Include="Composite\IShape.cs" />
+    <Compile Include="Composite\ShapeComposite.cs" />
     <Compile Include="Factory\Circle.cs" />
     <Compile Include="Factory\IShape.cs" />
     <Compile Include="Factory\IShapeFactory.cs" />
     <Compile Include="Factory\ShapeFactory.cs" />
     <Compile Include="Factory\Triangle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Composite\TextFile1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

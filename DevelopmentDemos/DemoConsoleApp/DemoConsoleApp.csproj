@@ -50,6 +50,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DesignPatterns\DesignPatterns.csproj">
+      <Project>{11290687-756A-42BF-BE62-F6D513A190C1}</Project>
+      <Name>DesignPatterns</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GenericsDemo\GenericsDemo.csproj">
       <Project>{8f07e8f5-4197-4f9c-8c95-3345d64b8796}</Project>
       <Name>GenericsDemo</Name>
