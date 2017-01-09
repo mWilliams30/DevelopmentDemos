@@ -1,24 +1,19 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ExtentionMethods;
+﻿using ExtentionMethods;
+using NUnit.Framework;
 
 namespace DemoUnitTests
 {
-    [TestClass]
+    [TestFixture]
     public class ExtentionMethodTest
     {
-        [TestMethod]
+        [Test]
         public void Add50ToIntegerValue()
         {
             int x = 100;
             Assert.AreEqual(x.Add50(), 150);
         }
 
-        [TestMethod]
+        [Test]
         public void AddHelloWorldToStringValue()
         {
             string personSays = "Mark Says";
